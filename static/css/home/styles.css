@@ -12,6 +12,7 @@ body {
     height: 100vh;
 }
 
+
 /* css Header */
 
 header {
@@ -89,12 +90,14 @@ header {
     background-color: rgba(255, 255, 255, .9);
 }
 
+
 /* css main */
 
 main {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     padding-top: 10%;
     width: 100vw;
     height: 100vh;
@@ -109,6 +112,7 @@ main {
     height: 60%;
     border: 2px solid #000;
     border-radius: 1rem;
+    margin-bottom: 2%;
 }
 
 .titulo-texto {
@@ -130,12 +134,60 @@ main {
     border: 2px solid #000;
     width: 90%;
     height: 70%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.decricao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: desc;
+}
+
+.decricao p {
+    overflow: auto;
+    width: 80%;
+    height: 60%;
+}
+
+.decricao p::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+}
+
+.decricao p::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 0px;
+}
+
+.decricao p::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.botao {
+    grid-area: bnt;
+}
+
+.botao a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    height: 60%;
+    background-color: rgb(146, 50, 50);
+    margin: 0 15%;
+    border: 2px solid #000;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.botao a i {
+    font-size: 1.6rem;
+    margin: 0 10% 0 12%;
 }
 
 @media (max-width: 1500px) {
-
     /* css main */
     .conteudo {
         margin-top: 1%;
@@ -143,16 +195,13 @@ main {
 }
 
 @media (max-width: 1400px) {
-
     /* css header */
     .campo-header {
         width: 15%;
     }
-
     #fim-header input {
         width: 14%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 2%;
@@ -160,16 +209,13 @@ main {
 }
 
 @media (max-width: 1300px) {
-
     /* css header */
     .campo-header {
         width: 17%;
     }
-
     #fim-header input {
         width: 16%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 3%;
@@ -177,16 +223,13 @@ main {
 }
 
 @media (max-width: 1100px) {
-
     /* css header */
     .campo-header {
         width: 21%;
     }
-
     #fim-header input {
         width: 20%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 5%;
@@ -195,7 +238,6 @@ main {
 }
 
 @media (max-width: 1000px) {
-
     /* css main */
     .conteudo {
         margin-top: 6%;
@@ -204,16 +246,13 @@ main {
 }
 
 @media (max-width: 900px) {
-
     /* css header */
     .campo-header {
         width: 25%;
     }
-
     #fim-header input {
         width: 24%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 8%;
@@ -222,16 +261,13 @@ main {
 }
 
 @media (max-width: 800px) {
-
     /* css header */
     .campo-header {
         width: 28%;
     }
-
     #fim-header input {
         width: 26%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 10%;
@@ -240,18 +276,14 @@ main {
 }
 
 @media (max-width: 700px) {
-
     /* css header */
     .campo-header {
         width: 34%;
         margin: 0 4%;
     }
-
-
     #fim-header input {
         width: 30%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 12%;
@@ -264,21 +296,17 @@ main {
 }
 
 @media (max-width: 400px) {
-
     /* css header */
     .campo-header {
         width: 90%;
         margin: 0 4%;
     }
-
     #campo-fim-header {
         width: 60%;
     }
-
     #fim-header input {
         width: 40%;
     }
-
     /* css main */
     .conteudo {
         margin-top: 38%;
