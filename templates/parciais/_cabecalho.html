@@ -1,0 +1,18 @@
+{% load static %}
+
+<header>
+    <div id="inicio-header">
+        <h1>{{user.username.title}}</h1>
+        <a href="{% url 'logout' %}">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </a>
+    </div>
+    <div id="fim-header">
+        <div id="campo-fim-header">
+            <a href="{% url 'home' %}" class="campo-header">Home</a>
+            <a href="" class="campo-header">Categoria</a>
+            <a href="{% url 'cadPost' %}" class="campo-header">Postar</a>
+        </div>
+        <input type="search" placeholder="Pesquisar">
+    </div>
+</header>

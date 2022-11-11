@@ -1,0 +1,160 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 10% 70% 20%;
+    grid-template-areas: 'tt tt' 'img desc' 'img bnt';
+    width: 60%;
+    height: 60%;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    margin-bottom: 2%;
+}
+
+.titulo-texto {
+    grid-area: tt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-texto {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-texto img {
+    border-radius: 1rem;
+    border: 2px solid #000;
+    width: 90%;
+    height: 70%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.decricao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: desc;
+}
+
+.decricao p {
+    overflow: auto;
+    width: 80%;
+    height: 60%;
+}
+
+.decricao p::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+}
+
+.decricao p::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 0px;
+}
+
+.decricao p::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.botao {
+    grid-area: bnt;
+}
+
+.botao a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    height: 60%;
+    background-color: rgb(146, 50, 50);
+    margin: 0 15%;
+    border: 2px solid #000;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.botao a i {
+    font-size: 1.6rem;
+    margin: 0 10% 0 12%;
+}
+
+@media (max-width: 1500px) {
+    .conteudo {
+        margin-top: 1%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .conteudo {
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .conteudo {
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .conteudo {
+        margin-top: 5%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .conteudo {
+        margin-top: 6%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        margin-top: 8%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .conteudo {
+        margin-top: 10%;
+        width: 85%;
+    }
+}
+
+@media (max-width: 700px) {
+    .conteudo {
+        margin-top: 12%;
+        width: 90%;
+    }
+    .img-texto img {
+        width: 95%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    .conteudo {
+        margin-top: 38%;
+        width: 95%;
+    }
+    .img-texto img {
+        height: 45%;
+    }
+}
