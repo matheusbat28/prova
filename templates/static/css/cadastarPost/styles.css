@@ -1,5 +1,48 @@
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20%;
+    height: 80%;
+    width: 100%;
+}
+
+form div label {
+    display: none;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.titulo {
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+#btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 25%;
+}
+
+#btn button {
+    height: 100%;
+    width: 10%;
 }

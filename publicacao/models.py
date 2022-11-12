@@ -8,6 +8,7 @@ class Publicacao(models.Model):
     autor = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     data_publicacao = models.DateTimeField(default=timezone.now)
     conteudo_publicacao = models.TextField()
+    descricao_publicacao = models.TextField()
     imagem_publicacao = models.ImageField(
         upload_to='media/publicacao/%Y/%m/%d', blank=True, null=True)
 

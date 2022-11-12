@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %} 
 
 {% block title %} Publicação | {{ user.username.title }} {% endblock %}
 
@@ -9,8 +10,12 @@
 
 {% block main %}
     <main>
-        <form method="Post">
-            
+        <form method="Post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            {{form.as_div}}
+            <div id="btn">
+                <button type="submit">Criar</button>
+             </div>
         </form>
     </main>
 

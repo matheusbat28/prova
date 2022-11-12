@@ -5,6 +5,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from publicacao.models import Publicacao
 
 
 def login(request):
@@ -78,10 +79,13 @@ def cadastro(request):
 
 @login_required(login_url='login')
 def home(request):
+    conteudo = {
+        'publicacoes': Publicacao.objects.all()
+    }
     if request.method == 'POST':
         pass
     else:
-        return render(request, 'home/index.html')
+        return render(request, 'home/index.html', context=conteudo)
 
 def logout(request):
     auth.logout(request)
